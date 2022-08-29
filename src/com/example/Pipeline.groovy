@@ -13,11 +13,14 @@ class Pipeline {
 //    ===================== Your Code Starts Here =====================
 //    Note : use "script" to access objects from jenkins pipeline run (WorkflowScript passed from Jenkinsfile)
 //           for example: script.node(), script.stage() etc
-    script.stage("build")
+    
 //    ===================== Parse configuration file ==================
 
 //    ===================== Run pipeline stages =======================
-
+    script.stage("build")
+    script.stage("database")
+    script.stage("deploy")
+    script.stage("test")    
 //    ===================== End pipeline ==============================
     }
 }
