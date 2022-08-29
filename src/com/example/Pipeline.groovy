@@ -17,10 +17,22 @@ class Pipeline {
 //    ===================== Parse configuration file ==================
 
 //    ===================== Run pipeline stages =======================
-    script.stage("build")
+    stages {
+        stage('build') {
+            steps {
+                def call(Map config = [:]) {
+                    ${config.projectFolder}
+                    ${config.buildCommand}
+                }
+            }
+    
+    }    
+        
+        
+    /*script.stage("build")
     script.stage("database")
     script.stage("deploy")
-    script.stage("test")    
+    script.stage("test")*/    
 //    ===================== End pipeline ==============================
     }
 }
