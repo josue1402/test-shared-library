@@ -18,7 +18,7 @@ class Pipeline {
 
 //    ===================== Run pipeline stages =======================
     stages {
-        stage('build') {
+        script.stage('build') {
             steps {
                 echo "${projectFolder}"
                 echo "${buildCommand}"    
