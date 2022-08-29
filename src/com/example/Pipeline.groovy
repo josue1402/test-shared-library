@@ -18,14 +18,19 @@ class Pipeline {
 
 //    ===================== Run pipeline stages =======================
     stages {
-        script.stage('build') {
+        stage('build') {
             steps {
-                echo "${projectFolder}"
-                echo "${buildCommand}"    
+                script {
+                projectFolder('project')
+                }    
             }
         }
     }    
-        
+    
+    def projectFolder(String folder) {
+            folder: 'folder'
+            echo folder
+    }    
         
     /*script.stage("build")
     script.stage("database")
