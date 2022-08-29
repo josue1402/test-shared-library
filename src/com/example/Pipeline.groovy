@@ -18,9 +18,6 @@ class Pipeline {
 
 //    ===================== Run pipeline stages =======================
         script.stage("build"){
-            steps {
-                echo 'Hello World'
-            }
         }
         script.stage("database"){
         }
