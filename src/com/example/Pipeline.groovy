@@ -15,12 +15,10 @@ class Pipeline {
 //           for example: script.node(), script.stage() etc
     
 //    ===================== Parse configuration file ==================
-
+    def datas = readYaml file: 'configurationFile', text: "something: 'Override'"
+        assert datas.something == 'Override'
 //    ===================== Run pipeline stages =======================
         script.stage("build"){
-            steps{
-              script.steps(projectFolder:'project',buildCommand:"mvn clean test")
-            }
         }
         script.stage("database"){
         }
