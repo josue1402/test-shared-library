@@ -20,8 +20,8 @@ class Pipeline {
     stages {
         stage('build') {
             steps {
-                echo "${config.projectFolder}"
-                echo "${config.buildCommand}"    
+                echo "${projectFolder}"
+                echo "${buildCommand}"    
             }
         }
     }    
