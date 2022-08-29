@@ -17,7 +17,13 @@ class Pipeline {
 //    ===================== Parse configuration file ==================
 
 //    ===================== Run pipeline stages =======================
-    script.stage("build")
+        script.stage("build"){
+            steps{
+                script {
+                  projectFolder(target:[projectFolder: 'folder',buildCommand: "mvn clean test"])
+                }
+            } 
+        }
 //    ===================== End pipeline ==============================
     }
 }
