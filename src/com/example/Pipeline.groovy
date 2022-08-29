@@ -19,9 +19,7 @@ class Pipeline {
     //buildCommand = configuration.buildCommand    
 //    ===================== Run pipeline stages =======================
         script.stage("build"){
-            steps {
-                echo script.steps("build")    
-            }
+            script.steps("build")    
         }
         script.stage("database"){
         }
