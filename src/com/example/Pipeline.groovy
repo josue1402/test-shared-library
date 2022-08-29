@@ -17,10 +17,7 @@ class Pipeline {
 //    ===================== Parse configuration file ==================
 
 //    ===================== Run pipeline stages =======================
-    stages {
-        stage('build') {
-        }    
-    } 
+    script.stage("build")
 //    ===================== End pipeline ==============================
     }
 }
