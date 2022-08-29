@@ -15,13 +15,12 @@ class Pipeline {
 //           for example: script.node(), script.stage() etc
     
 //    ===================== Parse configuration file ==================
-    projectFolder = configuration.projectFolder
-    buildCommand = configuration.buildCommand    
+    //projectFolder = configuration.projectFolder
+    //buildCommand = configuration.buildCommand    
 //    ===================== Run pipeline stages =======================
         script.stage("build"){
             steps {
-                echo "$projectFolder"
-                echo "$buildCommand"
+                echo script.steps("build")    
             }
         }
         script.stage("database"){
