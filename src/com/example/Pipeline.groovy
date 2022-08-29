@@ -20,12 +20,10 @@ class Pipeline {
     stages {
         stage('build') {
             steps {
-                def call(Map config = [:]) {
-                    ${config.projectFolder}
-                    ${config.buildCommand}
-                }
+                echo "${config.projectFolder}"
+                echo "${config.buildCommand}"    
             }
-    
+        }
     }    
         
         
