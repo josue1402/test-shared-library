@@ -15,7 +15,7 @@ class Pipeline {
 //           for example: script.node(), script.stage() etc
     
 //    ===================== Parse configuration file ==================
-    conf = readYaml file: "configurationFile"
+    //conf = readYaml file: "configurationFile"
      
 //    ===================== Run pipeline stages =======================
         script.stage("build"){
