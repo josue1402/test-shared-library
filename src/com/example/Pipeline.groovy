@@ -20,7 +20,6 @@ class Pipeline {
         script.stage("build"){
             steps{
                 script {
-                  projectFolder(target:[projectFolder: 'folder',buildCommand: "mvn clean test"])
                 }
             } 
         }
