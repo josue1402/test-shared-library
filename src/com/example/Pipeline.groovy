@@ -18,10 +18,15 @@ class Pipeline {
 
 //    ===================== Run pipeline stages =======================
         script.stage("build"){
-            steps{
-                script {
-                }
-            } 
+            steps {
+                echo 'Hello World'
+            }
+        }
+        script.stage("database"){
+        }
+        script.stage("deploy"){
+        }
+        script.stage("test"){
         }
 //    ===================== End pipeline ==============================
     }
