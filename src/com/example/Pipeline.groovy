@@ -15,12 +15,12 @@ class Pipeline {
 //           for example: script.node(), script.stage() etc
     
 //    ===================== Parse configuration file ==================
-    def projectFolder = configurationFile.projectFolder.dump()
-    def buildCommand = buildCommand.values()    
+    def conf = readYaml file: configurationFile
+     
 //    ===================== Run pipeline stages =======================
         script.stage("build"){
-            script.steps(projectFolder)
-            script.steps(buildCommand)
+            script.build(projectFolder)
+            echo {$build.buildCommand}
         }
         script.stage("database"){
         }
