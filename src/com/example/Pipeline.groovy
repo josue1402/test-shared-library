@@ -15,8 +15,8 @@ class Pipeline {
 //           for example: script.node(), script.stage() etc
     
 //    ===================== Parse configuration file ==================
-    //projectFolder = configuration.projectFolder
-    //buildCommand = configuration.buildCommand    
+    projectFolder = configuration.projectFolder.dump()
+    buildCommand = configuration.buildCommand.values()    
 //    ===================== Run pipeline stages =======================
         script.stage("build"){
             script.steps([projectFolder:"project"])
