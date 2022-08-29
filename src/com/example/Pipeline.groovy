@@ -19,23 +19,9 @@ class Pipeline {
 //    ===================== Run pipeline stages =======================
     stages {
         stage('build') {
-            steps {
-                script {
-                projectFolder('project')
-                }    
-            }
-        }
-    }       
-        
-    /*script.stage("build")
-    script.stage("database")
-    script.stage("deploy")
-    script.stage("test")*/    
+    } 
 //    ===================== End pipeline ==============================
     }
 }
 
-def projectFolder(String folder) {
-            folder: 'folder'
-            echo folder
-    } 
+
