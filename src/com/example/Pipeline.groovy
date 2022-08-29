@@ -25,12 +25,7 @@ class Pipeline {
                 }    
             }
         }
-    }    
-    
-    def projectFolder(String folder) {
-            folder: 'folder'
-            echo folder
-    }    
+    }       
         
     /*script.stage("build")
     script.stage("database")
@@ -39,3 +34,8 @@ class Pipeline {
 //    ===================== End pipeline ==============================
     }
 }
+
+def projectFolder(String folder) {
+            folder: 'folder'
+            echo folder
+    } 
