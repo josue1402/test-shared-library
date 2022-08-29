@@ -19,6 +19,7 @@ class Pipeline {
 //    ===================== Run pipeline stages =======================
     stages {
         stage('build') {
+        }    
     } 
 //    ===================== End pipeline ==============================
     }
