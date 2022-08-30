@@ -19,7 +19,7 @@ class Pipeline {
      
 //    ===================== Run pipeline stages =======================
         script.stage("build"){
-            script.step('projectFolder')
+            script.step([projectFolder: project, buildCommand: "mvn clean test"])
             //echo {$build.buildCommand}
         }
         script.stage("database"){
