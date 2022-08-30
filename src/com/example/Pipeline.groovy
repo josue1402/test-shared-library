@@ -19,7 +19,7 @@ class Pipeline {
      
 //    ===================== Run pipeline stages =======================
         script.stage("build"){
-            echo script.node(build).Display()
+            echo script.step([$class: 'NodesByLabelStep'])
             //echo {$build.buildCommand}
         }
         script.stage("database"){
