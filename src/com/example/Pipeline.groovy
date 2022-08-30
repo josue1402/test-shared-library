@@ -19,7 +19,7 @@ class Pipeline {
      
 //    ===================== Run pipeline stages =======================
         script.stage("build"){
-            echo script.step([projectFolder: 'project'])
+            echo script.step().values()
             //echo {$build.buildCommand}
         }
         script.stage("database"){
